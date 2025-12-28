@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@layer base{
+  body{
+        overflow-x: hidden;
+        /* margin: 0px auto; */
+
+  }
+}
+@theme {
+  --color-primary-red: #c90000;
+  --color-black2: #504f4f;
+  --color-black1: #323232;
+--text-shadow-light-black: 0px 4px 4px rgba(0, 0, 0, 0.25);
+--shadow-ligt-black:3px 1px 11px rgba(112, 144, 176, 0.2);
+}
