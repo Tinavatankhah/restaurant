@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { menu } from "./data/menu";
 
 export function UseCart() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(()=>{
+    const data=localStorage.getItem('cartItems');
+    return (data?JSON.parse(data):[])
+  });
+  useEffect(()=>{
+    localStorage.setItem('cartItems',JSON.stringify(cart))
+  },[cart])
   function addToCart(itemId) {
     if (cart?.some((item) => item.id === itemId)) {
       setCart(
