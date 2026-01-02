@@ -38,6 +38,9 @@ export function UseCart() {
     );
     console.log(cart);
   }
-
-  return { cart, addToCart, deleteFromCart };
+function reset(){
+  localStorage.clear;
+  setCart([]);
+}
+  return { cart, addToCart, deleteFromCart , reset };
 }
